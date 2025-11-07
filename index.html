@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yadukul Dairy Assistant</title>
+    <meta name="description" content="Yadukul Dairy Assistant — crafted by Gandharv for premium dairy management." />
+    <meta name="author" content="Gandharv" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Tailwind + Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'brand-dark': '#0f172a',
+              'brand-light': '#1e293b',
+              'brand-accent': '#3b82f6',
+              'brand-accent-hover': '#2563eb',
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Print Styles -->
+    <style>
+      @media print {
+        body.printing > *:not(.print-container) {
+          display: none !important;
+        }
+        .print-container {
+          display: block !important;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+        .no-print {
+          display: none !important;
+        }
+      }
+    </style>
+
+    <!-- Charts -->
+    <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/index.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
